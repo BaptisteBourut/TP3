@@ -1,26 +1,27 @@
 
 #include <vector>
-#include "Observator.h"
 #include <iostream>
-
 using namespace std;
 
-class Observator;
+class Observateur;
 
 class Observable
 {
+
+
+private:
+    vector<Observateur*> m_list;
+    string m_name;
+
 public:
     Observable(string name);
     virtual ~Observable();
-    void addObs(Observator* obs);
-    void delObs(Observator* obs);
-    virtual int statut() const;
-    string getName() const { return this->m_name; };
+    void AddObs(Observateur* obs);
+    void DelObs(Observateur* obs);
+    virtual int Statut() const;
+    string GetName() const { return this->m_name; };
 
 protected:
-    void notify();
+    void Notify();
 
-private:
-    vector<Observator*> m_list;
-    string m_name;
 }; 

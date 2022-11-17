@@ -139,10 +139,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Barometre.cpp" />
+    <ClCompile Include="MeteoFrance.cpp" />
+    <ClCompile Include="Observateur.cpp" />
+    <ClCompile Include="Thermometre.cpp" />
     <ClCompile Include="TP3.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Barometre.h" />
+    <ClInclude Include="MeteoFrance.h" />
+    <ClInclude Include="Observateur.h" />
     <ClInclude Include="Observable.h" />
+    <ClInclude Include="Thermometre.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

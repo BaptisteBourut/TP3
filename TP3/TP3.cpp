@@ -2,10 +2,24 @@
 //
 
 #include <iostream>
+#include "Observable.h"
+#include "Observateur.h"
+#include "Barometre.h"
+#include "Thermometre.h"
+
+
+
 using namespace std;
 int main()
 {
     cout << "Hello World!\n";
+    Observable unObservable;
+    Thermometre unThermometre;
+    Barometre unBarometre;
+    Observateur unObservateur;
+    Observateur;
+
+
 
 
 }

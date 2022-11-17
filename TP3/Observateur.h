@@ -1,6 +1,6 @@
 
 #include "Observable.h"
-#include <vector>
+#include <list>
 #include <iostream>
 
 using namespace std;
@@ -12,10 +12,14 @@ class Observateur
 
 private:
     vector<Observable*> m_list;
+    typedef vector<Observable*>::iterator iterator;
+    typedef vector<Observable*>::const_iterator iterator;
+    virtual ~Observateur()=0;
+
+
 public:
     Observateur();
-    virtual ~Observateur();
-    void Update(const Observable* observable) const;
+    virtual void Update(const Observable* observable) const;
     void AddObs(Observable* obs);
     void DelObs(Observable* obs);
 

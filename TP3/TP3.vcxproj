@@ -142,6 +142,7 @@
     <ClCompile Include="Barometre.cpp" />
     <ClCompile Include="MeteoFrance.cpp" />
     <ClCompile Include="Observateur.cpp" />
+    <ClCompile Include="Observable.cpp" />
     <ClCompile Include="Thermometre.cpp" />
     <ClCompile Include="TP3.cpp" />
   </ItemGroup>

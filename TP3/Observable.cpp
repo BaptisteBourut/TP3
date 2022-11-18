@@ -1,8 +1,15 @@
 #include "Observable.h"
+void Observable::Notify() {
+	iterator ite = m_list.end();
+	for (iterator itb = m_list.begin(); itb != ite; itb++) {
+		(*itb)->Update(this);
+	}
 
-void Observable::AddObs(Observateur* obs) {
-	m_list.push_back(obs);
-	obs->AddObs(this);
+}
+
+void Observable::AddObs(Observateur* observateur) {
+	this->m_list.push_back(observateur);
+	observateur->AddObs(this);
 }
 
 void Observable::DelObs(Observateur* obs) {
@@ -18,10 +25,3 @@ Observable::~Observable() {
 	}
 }
 
-void Observable::Notify() {
-	iterator ite = m_list.end();
-	for (iterator itb = m_list.begin(); itb != ite; itb++) {
-		*(itb)->Update(this);
-	}
-	
-}
